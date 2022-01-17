@@ -43,12 +43,12 @@ function validateBinary(bits) {
 	bits = bits.split('')
 	let findOne = Math.max(...bits)
 	let findZero = Math.min(...bits)
+	if (findOne !== 1 || findZero !== 0) return 'enter valid binary'
 	bits.pop()
 	// can also item == findOne
 	const countOne = bits
 		.map((item, index) => (Number(item) === findOne ? index : null))
 		.filter((item) => item !== null)
-	if (findOne !== 1 || findZero !== 0) return 'enter valid binary'
 	// can also parity_bit == 0
 	return parity_bit === 0
 		? countOne.length % 2 === 0
