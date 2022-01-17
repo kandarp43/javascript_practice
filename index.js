@@ -521,7 +521,7 @@ function findDuplicate(arr) {
 	for (let i = 2; i <= ind.length; i++) {
 		message += `index of ${i} duplicate number('${minNum}') is ${ind[i - 1]} \n`
 	}
-	return message ? message : 'no duplicate number'
+	return message ? message : 'no duplicate numbers'
 }
 findDuplicate([2, 3, 4, 2, 2, 4, 2, 2])
 console.log(findDuplicate([1, 2, 3, 4, 5, 6, 7, 8, 1]))
