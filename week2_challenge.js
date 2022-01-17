@@ -72,7 +72,6 @@ PROBLEM - 3
                 The next 2 are ):                    -1      Total: 0
                 The last 2 are :(                    -1      Total: -1
 */
-
 function happinessNumber(smilies) {
 	smilies = smilies.split('')
 	let total = 0
