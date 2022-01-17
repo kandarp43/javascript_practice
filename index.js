@@ -523,5 +523,5 @@ function findDuplicate(arr) {
 	}
 	return message ? message : 'no duplicate numbers'
 }
-findDuplicate([2, 3, 4, 2, 2, 4, 2, 2])
+console.log(findDuplicate([2, 3, 4, 2, 2, 4, 2, 2]))
 console.log(findDuplicate([1, 2, 3, 4, 5, 6, 7, 8, 1]))
