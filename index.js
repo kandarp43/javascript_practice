@@ -15,7 +15,6 @@
  * i = 0    0 + index of 0 is 2  = 0 + 2 = 2 value of length will be 0
  */
 
-// print 1 t0 10
 
 // challenge 1
 /* expected output */
