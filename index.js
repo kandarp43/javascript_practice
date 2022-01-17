@@ -504,3 +504,24 @@ function changeCase(str) {
 	return str.toUpperCase()
 }
 console.log(changeCase('hEllO'))
+// console.clear()
+
+// var j = 0
+// for (var inp = 0; inp < 10; inp++) {
+// 	setTimeout(() => {
+// 		console.log(j)
+// 		j++
+// 	}, inp * 1000)
+// }
+
+function findDuplicate(arr) {
+	let minNum = Math.min(...arr)
+	const ind = arr
+		.map((item, index) => (item === minNum ? index : null))
+		.filter((item) => item !== null)
+
+	for (let i = 2; i <= ind.length; i++) {
+		console.log(`index of ${i} duplicate number('${minNum}') is ${ind[i - 1]}`)
+	}
+}
+// findDuplicate([2, 3, 4, 2, 2, 4, 2, 2])
