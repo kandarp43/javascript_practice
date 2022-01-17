@@ -517,9 +517,12 @@ function findDuplicate(arr) {
 	const ind = arr
 		.map((item, index) => (item === minNum ? index : null))
 		.filter((item) => item !== null)
+	console.log(minNum + ' is minimum number')
 	let message = ''
 	for (let i = 2; i <= ind.length; i++) {
-		message += `index of ${i} duplicate number('${minNum}') is ${ind[i - 1]} \n`
+		message += ` -> ${i} duplicate number of ('${minNum}') is at index of ${
+			ind[i - 1]
+		} \n`
 	}
 	return message ? message : 'no duplicate numbers'
 }
