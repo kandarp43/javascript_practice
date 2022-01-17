@@ -15,7 +15,6 @@
  * i = 0    0 + index of 0 is 2  = 0 + 2 = 2 value of length will be 0
  */
 
-
 // challenge 1
 /* expected output */
 // Today is : Tuesday.
@@ -518,9 +517,11 @@ function findDuplicate(arr) {
 	const ind = arr
 		.map((item, index) => (item === minNum ? index : null))
 		.filter((item) => item !== null)
-
+	let message = ''
 	for (let i = 2; i <= ind.length; i++) {
-		console.log(`index of ${i} duplicate number('${minNum}') is ${ind[i - 1]}`)
+		message += `index of ${i} duplicate number('${minNum}') is ${ind[i - 1]} \n`
 	}
+	return message ? message : 'no duplicate number'
 }
-// findDuplicate([2, 3, 4, 2, 2, 4, 2, 2])
+findDuplicate([2, 3, 4, 2, 2, 4, 2, 2])
+console.log(findDuplicate([1, 2, 3, 4, 5, 6, 7, 8, 1]))

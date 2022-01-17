@@ -15,7 +15,7 @@ function isIsogram(word) {
 	//after realized that can also do with 'new Set' method
 }
 console.log(isIsogram('Algorism')) // true
-console.log(isIsogram('Password')) // false
+console.log(isIsogram('PasSword')) // false
 console.log(isIsogram('Consecutive')) // false
 
 /*
