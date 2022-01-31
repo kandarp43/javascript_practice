@@ -502,29 +502,35 @@ function changeCase(str) {
 	return str.toUpperCase()
 }
 console.log(changeCase('hEllO'))
-// console.clear()
+console.clear()
 
-// var j = 0
-// for (var inp = 0; inp < 10; inp++) {
-// 	setTimeout(() => {
-// 		console.log(j)
-// 		j++
-// 	}, inp * 1000)
+/* side challenge */
+// function findDuplicate(arr) {
+// 	let minNum = Math.min(...arr)
+// 	const ind = arr
+// 		.map((item, index) => (item === minNum ? index : null))
+// 		.filter((item) => item !== null)
+// 	console.log(minNum + ' is minimum number')
+// 	let message = ''
+// 	for (let i = 2; i <= ind.length; i++) {
+// 		message += ` -> ${i} duplicate number of ('${minNum}') is at index of ${
+// 			ind[i - 1]
+// 		} \n`
+// 	}
+// 	return message ? message : 'no duplicate numbers'
 // }
+// console.log(findDuplicate([2, 3, 4, 2, 2, 4, 2, 2]))
+// console.log(findDuplicate([1, 2, 3, 4, 5, 6, 7, 8, 1]))
 
-function findDuplicate(arr) {
-	let minNum = Math.min(...arr)
-	const ind = arr
-		.map((item, index) => (item === minNum ? index : null))
-		.filter((item) => item !== null)
-	console.log(minNum + ' is minimum number')
-	let message = ''
-	for (let i = 2; i <= ind.length; i++) {
-		message += ` -> ${i} duplicate number of ('${minNum}') is at index of ${
-			ind[i - 1]
-		} \n`
-	}
-	return message ? message : 'no duplicate numbers'
-}
-console.log(findDuplicate([2, 3, 4, 2, 2, 4, 2, 2]))
-console.log(findDuplicate([1, 2, 3, 4, 5, 6, 7, 8, 1]))
+/*  */
+
+arr = ['(', ':', ')', ':']
+arr.forEach(function (item, index) {
+	console.log(
+		item + arr[index + 1] === '(:' || item + arr[index + 1] === ':)'
+			? 'happy'
+			: item + arr[index + 1] === ':(' || item + arr[index + 1] === '):'
+			? 'sad'
+			: ''
+	)
+})

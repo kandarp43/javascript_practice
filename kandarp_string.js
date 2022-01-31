@@ -51,10 +51,10 @@ function validateBinary(bits) {
 		? countOne.length % 2 === 0
 		: countOne.length % 2 !== 0
 }
+
 console.log(validateBinary('00101101')) // true
 console.log(validateBinary('11000000')) // true
 console.log(validateBinary('11000001')) // false
-
 /*
 PROBLEM - 3
 
@@ -81,6 +81,7 @@ function happinessNumber(smilies) {
 	})
 	return total
 }
+
 console.log(happinessNumber(':):(')) // -1
 console.log(happinessNumber('(:)')) //  2
 console.log(happinessNumber('::::')) //  0
