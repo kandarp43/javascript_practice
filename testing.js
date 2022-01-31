@@ -46,9 +46,8 @@ const weq = () => {
 }
 // weq()
 
-
 // const obj1 = { a: 1, b: 2, c: 3 }
-// const obj2 =obj1
+// const obj2 = obj1
 // obj1.a = 10
 // console.log(obj2)
 
