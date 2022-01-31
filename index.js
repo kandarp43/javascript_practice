@@ -524,13 +524,3 @@ console.clear()
 
 /*  */
 
-arr = ['(', ':', ')', ':']
-arr.forEach(function (item, index) {
-	console.log(
-		item + arr[index + 1] === '(:' || item + arr[index + 1] === ':)'
-			? 'happy'
-			: item + arr[index + 1] === ':(' || item + arr[index + 1] === '):'
-			? 'sad'
-			: ''
-	)
-})

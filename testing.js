@@ -24,11 +24,15 @@ console.log(abcd.next().value)
 console.log(abcd.next().value)
 console.clear()
 
-function tb() {
-	this.table = 'window table'
-	console.dir(new.target)
+function Tb() {
+	this.table = 'kandarp'
+	this.greet = function () {
+		return this.table
+	}
 }
-new tb()
+
+const con = new Tb()
+console.log(con.greet())
 
 this.table = 'window is here'
 console.log(this.table)
@@ -40,4 +44,21 @@ awe()
 const weq = () => {
 	console.log(this.table)
 }
-weq()
+// weq()
+
+
+// const obj1 = { a: 1, b: 2, c: 3 }
+// const obj2 =obj1
+// obj1.a = 10
+// console.log(obj2)
+
+// const obj1 = { a: 1, b: 2, c: 3 }
+// const obj2 = {}
+// for (let key in obj1) {
+// 	obj2[key] = obj1[key]
+// }
+// for (let [key, value] of Object.entries(obj1)) {
+// 	obj2[key] = value
+// }
+// obj1.a = 10
+// console.log(obj2)
