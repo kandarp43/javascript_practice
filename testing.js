@@ -61,3 +61,15 @@ const weq = () => {
 // }
 // obj1.a = 10
 // console.log(obj2)
+
+/* prototype chaining and stuff */
+let F = function () {
+	this.a = 1
+	this.b = 2
+}
+F.prototype.b = 3
+let o = new F() // {a: 1, b: 2}
+
+// add properties in F function's prototype
+F.prototype.c = 4
+console.log(o.a)
