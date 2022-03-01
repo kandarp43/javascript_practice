@@ -14,18 +14,23 @@ function isBalanced(string) {
 		},
 	}
 	for (let value of string) {
-		if (brackets[value]) {
-			brackets.arr.push(value)
-			continue
-		} else if (brackets[brackets.arr[brackets.size - 1]] !== value) return false
-		brackets.arr.pop()
+		if (brackets[value]) brackets.arr.push(value)
+		else if (brackets[brackets.arr[brackets.size - 1]] !== value) return false
+		else brackets.arr.pop()
 	}
-
-	return !brackets.size ? true : false
+	return brackets.size == 0
 }
 
-console.log(isBalanced('[()]{}{[()()]()}')) // true
-console.log(isBalanced('[(])')) // false
-console.log(isBalanced('[({}])')) // fasle
+// console.log(isBalanced('[()]{}{[()()]()}')) // true
+// console.log(isBalanced('[(])')) // false
+// console.log(isBalanced('[({}])')) // fasle
 console.log(isBalanced('[]{}()')) // true
-console.log(isBalanced('[(){()}{}]')) // true
+// console.log(isBalanced('[(){()}{}]')) // true
+
+// for (let value of string) {
+// 	if (brackets[value]) {
+// 		brackets.arr.push(value)
+// 		continue
+// 	} else if (brackets[brackets.arr[brackets.size - 1]] !== value) return false
+// 	brackets.arr.pop()
+// }

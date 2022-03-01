@@ -1,0 +1,20 @@
+first i make an object
+
+const o1 = {
+    a:{
+        b:{
+            c:10
+        }
+    }
+}
+
+if i want to deep clone it it might not gonna happen directly through {...o1} or Object.assign({},o1)
+
+so for that we must have to make our own func.
+
+first lets destructure it 
+- o1[a][b][c] we have to do like this or we can use recursion.
+
+-> so lets check the value of a , if its object then iterate through for loop.
+-> if value of b is also an object then do same process until its not an object.
+-> 
